@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBONARIUM SUNSET LAB</title>
+    <!-- Use existing styles plus lab-specific ones -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lab.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sitdeck-container">
+        <!-- Header -->
+        <header class="top-hud">
+            <div class="logo-area">
+                <h1>IBONARIUM <span>SUNSET.LAB</span></h1>
+                <div class="status-indicator">
+                    <span class="pulse"></span> ЛОКАЛЬНИЙ АРХІВ
+                </div>
+            </div>
+            <div class="global-stats">
+                <a href="index.html" class="nav-btn">← ПОВЕРНУТИСЯ НА LIVE</a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Lab Player Workspace -->
+            <div class="lab-workspace">
+                <!-- Video Player Section -->
+                <section class="video-section lab-player-area">
+                    <div class="video-wrapper glass-frame">
+                        <video id="lab-video-player" controls autoplay muted>
+                            <!-- Source will be injected via JS -->
+                        </video>
+                        <div class="video-overlay-hud" id="video-hud">
+                            <div class="hud-top-left" id="current-video-title">FILE: --</div>
+                            <div class="hud-top-right" id="current-video-date">DATE: --</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Playlist Menu Section -->
+                <aside class="playlist-section glass-frame">
+                    <div class="section-header">
+                        <h2>ВІДЕО АРХІВ</h2>
+                        <div class="line-deco"></div>
+                    </div>
+                    <div class="playlist-list" id="playlist-container">
+                        <div class="loading-feed">ПОШУК ВІДЕО ФАЙЛІВ...</div>
+                    </div>
+                </aside>
+            </div>
+        </main>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section glass-frame" style="margin-top: 20px;">
+            <div class="section-header">
+                <h2>ФОТО АРХІВ САНСЕТІВ</h2>
+                <div class="line-deco"></div>
+                <div style="font-family:'Rajdhani', sans-serif; color:#00f3ff; margin-top:5px;" id="photo-stats">Знайдено: 0</div>
+            </div>
+            <div class="lab-gallery-grid" id="photo-gallery-grid">
+                <div class="loading-feed" style="grid-column: 1 / -1; padding: 40px;">ПОШУК ФОТО ФАЙЛІВ...</div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Photo Modal -->
+    <div id="photo-modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="Enlarged Archive Photo">
+            <div class="modal-caption" id="modal-caption">--</div>
+        </div>
+    </div>
+
+    <script src="js/lab.js"></script>
+</body>
+</html>
